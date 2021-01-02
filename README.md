@@ -6,6 +6,8 @@ Essential cross-platform UI components for React Native
 
 - Step 1: Setting up React Native with Storybook: https://dev.to/ugglr/step-1-setting-up-react-native-with-storybook-36l
 
+- How to deploy React App to GitHub Pages: https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f
+
 ### See more:
 
 - React Native Storybook Loader: https://github.com/elderfo/react-native-storybook-loader
