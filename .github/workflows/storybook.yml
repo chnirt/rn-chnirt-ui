@@ -32,6 +32,7 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
+        run: ls
         with:
           github_token: ${{ secrets.GITHUBTOKEN }}
-          publish_dir: /home/runner/work/rn-chnirt-ui/rn-chnirt-ui/storybook-static
+          publish_dir: ./storybook-static
