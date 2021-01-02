@@ -1,9 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {TouchableHighlight} from 'react-native';
+import {View, Text, TouchableHighlight} from 'react-native';
+import styles from './styles';
 
 export default function MyButton({onPress, children}) {
-  return <TouchableHighlight onPress={onPress}>{children}</TouchableHighlight>;
+  return (
+    <View style={styles.buttonContainer}>
+      <TouchableHighlight onPress={onPress}>
+        <Text style={styles.buttonText}>{children}</Text>
+      </TouchableHighlight>
+    </View>
+  );
 }
 
 MyButton.defaultProps = {

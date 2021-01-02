@@ -6,7 +6,11 @@ module.exports = {
   //   "../stories/**/*.stories.@(js|jsx|ts|tsx)"
   // ],
   stories: ['../packages/**/*.stories.[tj]s'],
-  // addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
+  addons: [
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-controls',
+  ],
   webpackFinal: (config) => {
     return {
       ...config,
