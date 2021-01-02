@@ -25,10 +25,10 @@ jobs:
       - name: Install dependencies
         run: yarn
         
-      - name: Git
-        run:  |
-          git config --global user.name "chnirt"
-          git config --global user.email "trinhchinchin@gmail.com"
+      # - name: Git
+      #   run:  |
+      #     git config --global user.name "chnirt"
+      #     git config --global user.email "trinhchinchin@gmail.com"
 
       - name: Deploy
         run: yarn deploy
