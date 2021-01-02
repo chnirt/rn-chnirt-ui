@@ -31,8 +31,8 @@ jobs:
         run: yarn build-storybook-web
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
         run: ls
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUBTOKEN }}
           publish_dir: ./storybook-static
