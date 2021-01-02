@@ -2,7 +2,7 @@
   "name": "storybook",
   "version": "0.0.1",
   "private": true,
-  "homepage": "http://chnirt.github.io/rn-chnirt-ui",
+  "homepage": "https://chnirt.github.io/rn-chnirt-ui",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
