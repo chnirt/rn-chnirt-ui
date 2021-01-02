@@ -3,7 +3,7 @@ export default {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'red',
+    backgroundColor: 'blue',
     padding: 10,
     borderRadius: 5,
   },
