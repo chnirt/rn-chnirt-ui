@@ -1,0 +1,85 @@
+{
+  "name": "storybook",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "storybook": "start-storybook -p 6006",
+    "prestorybook": "rnstl",
+    "build-react": "webpack --mode production",
+    "start-react": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "start-storybook-web": "./node_modules/@storybook/react/bin/index.js",
+    "build-storybook-web": "./node_modules/@storybook/react/bin/build.js",
+    "storybook-web": "yarn run start-storybook-web"
+  },
+  "config": {
+    "react-native-storybook-loader": {
+      "searchDir": [
+        "./src",
+        "./packages"
+      ],
+      "pattern": "**/*.stories.js",
+      "outputFile": "./storybook/storyLoader.js"
+    }
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.13.2",
+    "react": "16.13.1",
+    "react-native": "0.63.3",
+    "react-native-web": "^0.14.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "@babel/runtime": "^7.8.4",
+    "@react-native-community/async-storage": "^1.12.1",
+    "@react-native-community/eslint-config": "^1.1.0",
+    "@storybook/addon-actions": "^6.1.11",
+    "@storybook/addon-essentials": "^6.1.11",
+    "@storybook/addon-knobs": "^5.3",
+    "@storybook/addon-links": "^6.1.11",
+    "@storybook/addon-ondevice-actions": "^5.3.23",
+    "@storybook/addon-ondevice-knobs": "^5.3.23",
+    "@storybook/cli": "^6.1.11",
+    "@storybook/react": "^6.1.11",
+    "@storybook/react-native": "^5.3.23",
+    "@storybook/react-native-server": "^5.3.23",
+    "@types/jest": "^25.2.3",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-native": "^0.63.2",
+    "@types/react-test-renderer": "^16.9.2",
+    "@typescript-eslint/eslint-plugin": "^2.27.0",
+    "@typescript-eslint/parser": "^2.27.0",
+    "@webpack-cli/serve": "^1.2.1",
+    "babel-jest": "^25.1.0",
+    "babel-loader": "^8.2.2",
+    "eslint": "^6.5.1",
+    "html-webpack-plugin": "^4.5.0",
+    "jest": "^25.1.0",
+    "metro-react-native-babel-preset": "^0.59.0",
+    "react-dom": "^17.0.1",
+    "react-native-storybook-loader": "^2.0.2",
+    "react-test-renderer": "16.13.1",
+    "ts-loader": "^8.0.13",
+    "typescript": "^3.8.3",
+    "webpack": "4.32.2",
+    "webpack-cli": "3.3.2",
+    "webpack-dev-server": "3.5.1"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}
