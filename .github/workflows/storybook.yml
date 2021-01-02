@@ -17,7 +17,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
       - name: Set up Node.js ${{ matrix.node-version }}
@@ -30,14 +29,6 @@ jobs:
 
       - name: Build
         run: yarn build-storybook-web
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: '0.79.1'
-
-      - name: Build
-        run: hugo --minify
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
