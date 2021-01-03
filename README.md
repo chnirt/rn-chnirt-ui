@@ -17,3 +17,5 @@ Essential cross-platform UI components for React Native
 - Cannot find module ‘webpack cli / bin / config yargs‘: https://programmerah.com/cannot-find-module-webpack-cli-bin-config-yargs-14915/
 
 - How to deploy React App to GitHub Pages: https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f
+
+- Setting up a React Native Component Library: https://whoisryosuke.com/blog/2020/setting-up-a-react-native-component-library/
