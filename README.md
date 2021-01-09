@@ -8,6 +8,10 @@ Essential cross-platform UI components for React Native
 
 - How to deploy React App to GitHub Pages: https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f
 
+- Add SVG to webpack (Part I): https://stefanmajiros.medium.com/the-svgs-inside-react-native-0-61-5-and-storybook-566bcd43ba94
+
+Add SVG to webpack (Part II): https://stefanmajiros.medium.com/exporting-react-native-storybook-components-as-static-web-app-d72024fbac19
+
 ### See more:
 
 - React Native Storybook Loader: https://github.com/elderfo/react-native-storybook-loader

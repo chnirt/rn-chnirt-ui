@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 
-import {PRIMARY_COLOR} from '../../packages/constants';
+import {DISABLED_COLOR, PRIMARY_COLOR} from '../../packages/constants';
 
 export const styles = StyleSheet.create({
   ListItem: {
@@ -18,9 +18,18 @@ export const styles = StyleSheet.create({
     borderRadius: 20 / 5,
     borderColor: PRIMARY_COLOR,
     borderWidth: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  CheckBoxWithDisabled: {
+    borderColor: DISABLED_COLOR,
   },
   Title: {
+    color: PRIMARY_COLOR,
     marginLeft: 10,
+  },
+  TitleWithDisabled: {
+    color: DISABLED_COLOR,
   },
   PinBox: {},
 });

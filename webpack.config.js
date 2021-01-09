@@ -17,6 +17,7 @@ module.exports = {
     alias: {
       'react-native$': 'react-native-web',
       '@storybook/react-native': '@storybook/react', //<-here
+      'react-native-svg': 'react-native-svg/lib/commonjs/ReactNativeSVG.web',
     },
   },
   module: {

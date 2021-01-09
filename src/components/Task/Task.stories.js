@@ -7,8 +7,8 @@ import {action} from '@storybook/addon-actions';
 import Task from '.';
 export const task = {
   id: '1',
-  title: 'Test Task',
-  state: 'TASK_INBOX',
+  title: 'Take a coffee',
+  state: 'TASK_DEFAULT',
   updatedAt: new Date(2018, 0, 1, 9, 0),
 };
 
@@ -18,10 +18,12 @@ export const actions = {
 };
 storiesOf('Task', module)
   .addDecorator((story) => <View style={styles.TaskBox}>{story()}</View>)
-  .add('default', () => <Task task={task} {...actions} />)
-  .add('pinned', () => (
-    <Task task={{...task, state: 'TASK_PINNED'}} {...actions} />
+  .add('default', () => (
+    <Task task={{...task, state: 'TASK_DEFAULT'}} {...actions} />
   ))
-  .add('archived', () => (
-    <Task task={{...task, state: 'TASK_ARCHIVED'}} {...actions} />
+  .add('checked', () => (
+    <Task task={{...task, state: 'TASK_CHECKED'}} {...actions} />
+  ))
+  .add('disabled', () => (
+    <Task task={{...task, state: 'TASK_DISABLED'}} {...actions} />
   ));
