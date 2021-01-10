@@ -5,18 +5,14 @@ import {SafeAreaView, View, Text, TouchableOpacity} from 'react-native';
 import {styles} from './styles';
 import {CheckSVG} from './svgs';
 
-export default function Task({
-  task: {id, title, state},
-  color,
-  onArchiveTask,
-  onPinTask,
-}) {
+export const Task = ({task: {id, title, state}, color, onCheckTask}) => {
   return (
-    <SafeAreaView style={styles.ListItem}>
-      <View style={styles.TaskBox}>
-        <TouchableOpacity
-          onPress={() => onArchiveTask(id)}
-          disabled={state === 'TASK_DISABLED'}>
+    <SafeAreaView style={styles.TaskContainer}>
+      <TouchableOpacity
+        style={styles.TaskBox}
+        onPress={() => onCheckTask(id)}
+        disabled={state === 'TASK_DISABLED'}>
+        <View>
           {
             {
               TASK_DEFAULT: <View style={styles.CheckBox} />,
@@ -30,28 +26,21 @@ export default function Task({
               ),
             }[state]
           }
-        </TouchableOpacity>
+        </View>
         <Text
           style={[
             styles.Title,
             state === 'TASK_DISABLED' ? styles.TitleWithDisabled : null,
           ]}
+          numberOfLines={1}
+          ellipsizeMode="tail"
           accessibilityState={{
             selected: state === 'TASK_CHECKED',
             disabled: state === 'TASK_DISABLED',
           }}>
           {title}
         </Text>
-      </View>
-      <View style={styles.PinBox}>
-        <TouchableOpacity onPress={() => onArchiveTask(id)}>
-          {state !== 'TASK_ARCHIVED' ? (
-            <View style={styles.CheckBox} />
-          ) : (
-            <View style={styles.CheckBox} />
-          )}
-        </TouchableOpacity>
-      </View>
+      </TouchableOpacity>
     </SafeAreaView>
   );
-}
+};

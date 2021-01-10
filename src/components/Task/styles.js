@@ -3,12 +3,13 @@ import {StyleSheet} from 'react-native';
 import {DISABLED_COLOR, PRIMARY_COLOR} from '../../packages/constants';
 
 export const styles = StyleSheet.create({
-  ListItem: {
+  TaskContainer: {
     flexDirection: 'row',
     flex: 1,
     justifyContent: 'space-between',
   },
   TaskBox: {
+    flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
   },
@@ -31,5 +32,4 @@ export const styles = StyleSheet.create({
   TitleWithDisabled: {
     color: DISABLED_COLOR,
   },
-  PinBox: {},
 });

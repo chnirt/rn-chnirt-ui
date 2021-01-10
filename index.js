@@ -12,4 +12,4 @@ AppRegistry.runApplication(appName, {
   rootTag: document.getElementById('root'),
 });
 
-// export {default} from './storybook';
+export {default} from './storybook';
