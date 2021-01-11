@@ -2,6 +2,8 @@ import {PRIMARY_COLOR} from '../src/packages/constants';
 
 export const parameters = {
   actions: {argTypesRegex: '^on[A-Z].*'},
+  controls: {expanded: true},
+
   // backgrounds: {
   //   default: 'chnirt',
   //   values: [

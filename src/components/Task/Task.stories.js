@@ -5,6 +5,8 @@ import {styles} from './styles';
 import {storiesOf} from '@storybook/react-native';
 import {action} from '@storybook/addon-actions';
 import {withKnobs, object} from '@storybook/addon-knobs';
+import {addParameters} from '@storybook/react';
+import {DocsPage, DocsContainer} from '@storybook/addon-docs/blocks';
 
 import {Task} from '.';
 
@@ -15,12 +17,29 @@ export const task = {
   updatedAt: new Date(2018, 0, 1, 9, 0),
 };
 
+addParameters({
+  docs: {
+    container: DocsContainer,
+    page: DocsPage,
+  },
+});
+
+// const Red = Template.bind({});
+// Red.args = {
+//   backgroundColor: '#e00',
+// };
+
 export const actions = {
   onCheckTask: action('onCheckTask'),
 };
+
 storiesOf('Task', module)
   .addDecorator(withKnobs)
-  .addDecorator((story) => <View style={styles.TaskBox}>{story()}</View>)
+  .addDecorator((Story) => (
+    <View style={styles.TaskBox}>
+      <Story />
+    </View>
+  ))
   .add('default', () => (
     <Task
       task={object('task', {...task, state: 'TASK_DEFAULT'})}
